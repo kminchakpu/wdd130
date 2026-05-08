@@ -1,0 +1,54 @@
+nav {
+    background-color: darkblue;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+h1 {
+    color: blue;
+}
+
+main {
+    max-width: 840px;
+
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid gray;
+    box-shadow: 0 0 30px #333;
+    padding: 1px;
+}
+
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0/0.1);
+    padding: 1rem;
+    color: #333;
+    background-color: #eee;
+    text-align: center;
+
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+p {
+    padding: 0;
+}
+
+footer {
+    margin-top: 15px;
+    border-top: 1px solid rgb(0 0 0/0.3);
+    text-align: center;
+}
