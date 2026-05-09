@@ -1,45 +1,64 @@
+:root {
+    /* Colors */
+    --nav-bg-color: rgb(8, 74, 117);
+    --nav-text-color: #ffffff;
+    --heading-color: rgb(24, 141, 209);
+    --aside-bg-color: #eeeeee;
+    --aside-text-color: #333333;
+    --border-color-light: rgb(0 0 0 / 0.1);
+    --border-color-dark: rgb(0 0 0 / 0.3);
+    --img-border-color: gray;
+    --shadow-color: rgba(0, 0, 0, 0.24);
+
+    /* Layout & Spacing */
+    --main-max-width: 840px;
+    --aside-width: 20em;
+    --standard-padding: 10px;
+    --standard-margin: 1em;
+    --img-main-width: 150px;
+    --img-aside-width: 200px;
+}
+
 nav {
-    background-color: rgb(8, 74, 117);
-    padding: 10px;
+    background-color: var(--nav-bg-color);
+    padding: var(--standard-padding);
 }
 
 nav a {
-    color: #fff;
-    padding: 10px;
+    color: var(--nav-text-color);
+    padding: var(--standard-padding);
     display: block;
     text-decoration: none;
 }
 
 h1 {
-    color: rgb(24, 141, 209);
+    color: var(--heading-color);
 }
 
 main {
-    max-width: 840px;
-
+    max-width: var(--main-max-width);
 }
 
 main img {
-    width: 150px;
+    width: var(--img-main-width);
     height: auto;
-    border: 1px solid gray;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid var(--img-border-color);
+    box-shadow: var(--shadow-color) 0px 3px 8px;
     padding: 1px;
 }
 
 aside {
-    width: 20em;
-    margin: 1em;
-    border: 1px solid rgb(0 0 0/0.1);
-    padding: 1em;
-    color: #333;
-    background-color: #eee;
+    width: var(--aside-width);
+    margin: var(--standard-margin);
+    border: 1px solid var(--border-color-light);
+    padding: var(--standard-margin);
+    color: var(--aside-text-color);
+    background-color: var(--aside-bg-color);
     text-align: center;
-
 }
 
 aside img {
-    width: 200px;
+    width: var(--img-aside-width);
     height: auto;
 }
 
@@ -48,7 +67,7 @@ p {
 }
 
 footer {
-    margin-top: 1em;
-    border-top: 1px solid rgb(0 0 0/0.3);
+    margin-top: var(--standard-margin);
+    border-top: 1px solid var(--border-color-dark);
     text-align: center;
 }
