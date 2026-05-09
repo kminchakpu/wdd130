@@ -85,6 +85,6 @@ h1 {
     margin-left: 15px;
 }
 
-p {
+.hero p {
     color: var(--secondary-color);
 }
