@@ -85,6 +85,10 @@ h1 {
     margin-left: 15px;
 }
 
+article {
+    color: var(--secondary-color);
+}
+
 article p {
     color: var(--secondary-color);
 }
