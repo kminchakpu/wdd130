@@ -26,6 +26,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
 nav {
     background-color: var(--nav-bg-color);
     padding: var(--standard-padding);
@@ -40,6 +45,7 @@ nav a {
 
 h1 {
     color: var(--heading-color);
+    padding: .5rem;
 }
 
 main {
@@ -53,6 +59,7 @@ main img {
     box-shadow: var(--shadow-color) 0px 3px 8px;
     padding: 1px;
     float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 aside {
@@ -79,7 +86,7 @@ aside h2 {
 }
 
 p {
-    padding: 0;
+    margin: 1rem;
 }
 
 footer {
@@ -95,4 +102,8 @@ footer {
     padding: var(--standard-padding);
     margin-bottom: var(--standard-margin);
     background-color: var(--aside-bg-color);
+}
+
+.left-indent {
+    padding-left: 2rem;
 }
