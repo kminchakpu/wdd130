@@ -16,8 +16,7 @@
     --aside-width: 20em;
     --standard-padding: 10px;
     --standard-margin: 1em;
-    --img-main-width: 150px;
-    --img-aside-width: 200px;
+
 }
 
 * {
@@ -53,7 +52,7 @@ main {
 }
 
 main img {
-    width: var(--img-main-width);
+    width: 840px;
     height: auto;
     border: 1px solid var(--img-border-color);
     box-shadow: var(--shadow-color) 0px 3px 8px;
@@ -74,7 +73,7 @@ aside {
 }
 
 aside img {
-    width: var(--img-aside-width);
+    width: 200px;
     height: auto;
 }
 
@@ -86,7 +85,7 @@ aside h2 {
 }
 
 p {
-    margin: 1rem;
+    padding: 0;
 }
 
 footer {
@@ -102,8 +101,4 @@ footer {
     padding: var(--standard-padding);
     margin-bottom: var(--standard-margin);
     background-color: var(--aside-bg-color);
-}
-
-.left-indent {
-    padding-left: 2rem;
 }
