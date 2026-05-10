@@ -52,7 +52,7 @@ main {
 }
 
 main img {
-    width: 200px;
+    width: 150px;
     height: auto;
     border: 1px solid var(--img-border-color);
     box-shadow: var(--shadow-color) 0px 3px 8px;
