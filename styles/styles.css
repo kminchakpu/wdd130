@@ -66,7 +66,6 @@ aside {
     width: var(--aside-width);
     margin: var(--standard-margin);
     border: 1px solid var(--border-color-light);
-    padding: var(--standard-margin);
     color: var(--aside-text-color);
     background-color: var(--aside-bg-color);
     text-align: center;
