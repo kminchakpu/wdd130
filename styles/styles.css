@@ -84,7 +84,7 @@ aside h2 {
 }
 
 p {
-    padding: 0;
+    padding: 1rem;
 }
 
 footer {
@@ -100,4 +100,8 @@ footer {
     padding: var(--standard-padding);
     margin-bottom: var(--standard-margin);
     background-color: var(--aside-bg-color);
+}
+
+.left-indent {
+    padding-left: 2rem;
 }
