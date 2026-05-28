@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 130 | HTML & CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML and CSS Web Quiz</h1>
+    </header>
+
+    <main>
+        <form>
+            <div class="form-control">
+                <label for="q1">1. What does the "M" stand for in HTML?</label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+
+            <div class="form-control">
+                <label for="q2">2. Briefly explain the purpose of the CSS box-sizing: border-box;
+                    property:</label>
+                <textarea id="q2" name="q2" rows="3" required
+                  placeholder="Type your short answer here..."></textarea>
+            </div>
+
+            <div class="form-control">
+                <label for="q3">3. Which HTML element is used to link an external CSS file?</label>
+                <select id="q3" name="q3" required>
+                    <option value="" selected disabled>Choose One ...</option>
+                    <option value="script">&lt;script&gt;</option>
+                    <option value="link">&lt;link&gt;</option>
+                    <option value="style">&lt;style&gt;</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label for="q4">4. How many grid columns will a container have if styled with
+                    grid-template-columns: repeat(3, 1fr);?</label>
+                <input type="number" id="q4" name="q4" required min="0">
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Web Quiz Form | WDD 130</p>
+    </footer>
+
+</body>
+
+</html>
