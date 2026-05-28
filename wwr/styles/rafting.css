@@ -114,7 +114,7 @@ article {
     height: auto;
 }
 
-h1 {
+.about-title {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -251,7 +251,7 @@ footer p {
     margin: 30px auto;
 }
 
-.container h2 {
+.title {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
