@@ -28,7 +28,6 @@ footer {
 }
 
 /* Header Layout  */
-/* Header Layout - Mobile First */
 header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -44,7 +43,7 @@ header img {
     width: auto;
 }
 
-/* Navigation Layout - Mobile First */
+/* Navigation Layout */
 header nav {
     margin-right: 0;
     justify-self: center;
@@ -71,11 +70,9 @@ header nav li a {
     font-family: var(--nav-font);
     text-decoration: none;
     padding: 10px 5px;
-    /* Reduced padding to fit small screen widths perfectly */
     border: 1px solid #555555;
     margin-left: -1px;
     font-size: 0.85rem;
-    /* Slightly smaller text for mobile screens */
 }
 
 header nav ul li:first-child a {
@@ -122,8 +119,16 @@ article {
     text-decoration: none;
 }
 
+/* ==========================================
+   About Us Section - Mobile First Styles
+   ========================================== */
+
+/* --- Hero Layout (Mobile Optimized) --- */
 .hero {
     position: relative;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .hero img {
@@ -132,31 +137,42 @@ article {
     height: auto;
 }
 
+/* Stays fixed cleanly at the top of the hero block */
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 16px;
+    padding: 12px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
+    background-color: rgba(38, 70, 83, 0.85);
+    /* Smooth tint fallback for var(--accent1-color) */
     color: var(--secondary-color);
     font-family: var(--heading-font);
+    font-size: 1.4rem;
+    margin: 0;
+    z-index: 2;
 }
 
+/* On mobile, text stacks below the image to prevent overlapping or cutting off */
 .hero article {
-    position: absolute;
-    top: 80px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(34, 33, 33, 0.8);
-    padding: 20px;
+    position: static;
+    background-color: #222121;
+    padding: 20px 15px;
+}
+
+.hero article h2 {
+    color: var(--amber-flame);
+    text-align: left;
+    margin-bottom: 12px;
 }
 
 .hero article img {
     float: right;
-    width: 120px;
-    margin-left: 15px;
+    width: 90px;
+    margin-left: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
 }
 
 article {
@@ -165,28 +181,29 @@ article {
 
 article p {
     color: var(--secondary-color);
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 h2 {
     font-family: var(--heading-font);
+    color: var(--primary-color);
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-/* History Section */
 .history-section {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
-    margin: 20px auto;
-    padding: 30px;
-    max-width: 1200px;
+    margin: 20px 15px;
+    padding: 20px 15px;
 }
 
 .history-grid {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
 }
 
@@ -196,30 +213,30 @@ h2 {
 }
 
 .history-grid img {
-    width: 250px;
-    height: 160px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-    background-color: #3f1dcb;
 }
 
-/* Adventure Section */
 .adventure-section {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
-    margin: 20px auto;
-    padding: 30px;
-    max-width: 1200px;
+    margin: 20px 15px;
+    padding: 20px 15px;
 }
 
 .adventure-container {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .adventure-card {
-    margin: 0;
-    flex: 1;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 320px;
     text-align: center;
 }
 
@@ -227,14 +244,14 @@ h2 {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    background-color: #e0e0e0;
+    border-radius: 4px;
 }
 
 .adventure-card figcaption {
-    margin-top: 8px;
-    font-size: 0.9rem;
+    margin-top: 10px;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: #555;
+    color: #444;
 }
 
 /* Footer Layout */
@@ -589,4 +606,12 @@ button[type="submit"]:hover {
 
 .trip-details {
     padding: 1.5rem;
+}
+
+.trip-entry .trip-img {
+    flex: 1;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
 }

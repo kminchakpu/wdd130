@@ -77,6 +77,11 @@
         font-size: 2.5rem;
     }
 
+    .hero article {
+        margin-top: 35px;
+
+    }
+
     .offerings-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -144,28 +149,40 @@
     /* ==========================================
        TRIPS PAGE
     ========================================== */
+    /* --- Trips Page Layout Enhancements --- */
+    .table-section {
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
 
+    /* Multi-column Flex Layout for Trip Listings */
     .trips-showcase {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
     .trip-entry {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         align-items: center;
         gap: 2rem;
         margin-bottom: 3rem;
     }
 
-    .trip-entry img {
-        width: 100%;
-        height: 350px;
+    .trip-entry .trip-img {
+        flex: 1;
+        max-width: 45%;
+        height: 280px;
         object-fit: cover;
+        border-radius: 4px;
     }
 
-    .trip-details {
-        padding: 2rem;
+    .trip-entry .trip-details {
+        flex: 1;
+    }
+
+    /* Alternating Design Pattern */
+    .trip-entry.reverse {
+        flex-direction: row-reverse;
     }
 
     .table-section {
@@ -234,5 +251,65 @@
     .socialmedia img {
         width: 45px;
         height: 45px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .hero {
+        display: block;
+    }
+
+    .hero h1 {
+        top: 20px;
+        padding: 16px;
+        font-size: 2rem;
+        opacity: 0.7;
+    }
+
+    .hero article {
+        position: absolute;
+        top: 90px;
+        left: 40px;
+        right: 40px;
+        padding: 30px;
+        background-color: rgba(34, 33, 33, 0.75);
+    }
+
+    .hero article img {
+        width: 120px;
+        margin-left: 15px;
+    }
+
+    .history-section {
+        margin: 30px auto;
+        padding: 30px;
+    }
+
+    .history-grid {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 30px;
+    }
+
+    .history-grid img {
+        width: 250px;
+        height: 160px;
+    }
+
+    .adventure-section {
+        margin: 30px auto;
+        padding: 30px;
+    }
+
+    .adventure-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .adventure-card {
+        flex: 1;
+        max-width: none;
     }
 }
