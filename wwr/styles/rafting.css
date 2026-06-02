@@ -97,14 +97,9 @@ header nav li a.active {
     font-weight: 700;
 }
 
-h1,
-h2 {
+h1 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-}
-
-.hero article h2 {
-    color: var(--amber-flame);
 }
 
 nav,
@@ -120,10 +115,10 @@ article {
 }
 
 /* ==========================================
-   About Us Section - Mobile First Styles
+   About Us Section 
    ========================================== */
 
-/* --- Hero Layout (Mobile Optimized) --- */
+/* --- Hero Layout */
 .hero {
     position: relative;
     background-color: var(--primary-color);
@@ -137,7 +132,6 @@ article {
     height: auto;
 }
 
-/* Stays fixed cleanly at the top of the hero block */
 .hero h1 {
     position: absolute;
     top: 0;
@@ -146,7 +140,6 @@ article {
     padding: 12px;
     text-align: center;
     background-color: rgba(38, 70, 83, 0.85);
-    /* Smooth tint fallback for var(--accent1-color) */
     color: var(--secondary-color);
     font-family: var(--heading-font);
     font-size: 1.4rem;
@@ -154,7 +147,6 @@ article {
     z-index: 2;
 }
 
-/* On mobile, text stacks below the image to prevent overlapping or cutting off */
 .hero article {
     position: static;
     background-color: #222121;
@@ -180,7 +172,6 @@ article {
 }
 
 article p {
-    color: var(--secondary-color);
     line-height: 1.5;
     font-size: 0.95rem;
 }
@@ -261,8 +252,6 @@ footer {
     font-family: var(--nav-font);
     margin: 20px auto;
     padding: 20px 5%;
-    max-width: 1200px;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -356,7 +345,6 @@ textarea {
     padding: 12px;
     border: 1px solid var(--accent1-color);
     font-size: 1rem;
-    box-sizing: border-box;
 }
 
 /* RADIO GROUP */
