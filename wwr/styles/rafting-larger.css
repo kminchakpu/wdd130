@@ -1,9 +1,5 @@
-/* ==========================================
-   DESKTOP VIEW
-========================================== */
+/*  DESKTOP & TABLET VIEW (768px and up) */
 @media screen and (min-width: 768px) {
-
-    /* ---------- General ---------- */
 
     h1 {
         font-size: 2.5rem;
@@ -17,69 +13,79 @@
         font-size: 1.05rem;
     }
 
-    /* ---------- Header ---------- */
-
-    /* Header Layout  */
+    /* Header Layout */
     header {
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
-        padding: 20px 5%;
+        padding: 20px;
     }
 
     header img {
         height: 90px;
         width: auto;
+        margin-left: 50px;
     }
 
-    /* Navigation Layout */
     header nav {
-        margin-right: 5%;
         justify-self: end;
-        width: 60%;
+        width: 70%;
+        margin-right: 50px;
     }
 
     header nav ul {
         list-style: none;
-        margin: 0;
-        padding: 0;
         display: flex;
-
+        gap: 0;
     }
 
     header nav li a {
         display: block;
+        white-space: nowrap;
         color: var(--secondary-color);
         font-family: var(--nav-font);
         text-decoration: none;
-        padding: 15px 25px;
+        padding: 12px 20px;
         border: 1px solid #555555;
-        margin-left: -1px;
         font-size: 0.95rem;
     }
 
-    /* ==========================================
-       HOME PAGE
-    ========================================== */
+    /* HOME PAGE COMPONENTS */
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
 
     .hero-section {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
         height: 75vh;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         max-width: 750px;
+        width: 85%;
         padding: 2rem 3rem;
+        z-index: 2;
     }
 
     .hero-text h1 {
         font-size: 2.5rem;
-    }
-
-    .hero article {
-        margin-top: 35px;
-
     }
 
     .offerings-grid {
@@ -94,9 +100,13 @@
         margin-bottom: 0;
     }
 
+    .cta-banner {
+        padding: 4rem 2rem;
+    }
+
     .newsletter-section {
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 3rem;
     }
 
@@ -116,46 +126,117 @@
         min-width: 180px;
     }
 
-    .cta-banner {
-        padding: 4rem 2rem;
+    /* ABOUT PAGE COMPONENTS */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
     }
 
-    /* ==========================================
-       ABOUT PAGE
-    ========================================== */
+    .hero > img {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        width: 100%;
+        min-height: 450px;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .hero h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        font-size: 2rem;
+        margin: 10px 0;
+        z-index: 3;
+    }
+
+    .hero article {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        z-index: 2;
+        margin: -190px 40px 40px 40px;
+        top: 10px;
+        background-color: rgba(34, 33, 33, 0.85);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .hero article h2 {
+        color: var(--amber-flame);
+        text-align: left;
+        margin-bottom: 12px;
+    }
+
+    .hero article img {
+        float: right;
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
 
     .history-section {
-        padding: 3rem;
+        margin: 30px auto;
+        padding: 30px;
+        max-width: 1100px;
     }
 
     .history-grid {
+        display: grid;
         grid-template-columns: 1fr auto 1fr;
-        gap: 2rem;
+        gap: 30px;
+        align-items: center;
     }
 
     .history-grid img {
-        width: 300px;
-        height: 200px;
+        width: 250px;
+        height: 160px;
+    }
+
+    .adventure-section {
+        margin: 30px auto;
+        padding: 30px;
+        max-width: 1100px;
     }
 
     .adventure-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 20px;
+    }
+
+    .adventure-card {
+        flex: 1;
+        max-width: none;
     }
 
     .adventure-card figcaption {
         font-size: 1rem;
     }
 
-    /* ==========================================
-       TRIPS PAGE
-    ========================================== */
-    /* --- Trips Page Layout Enhancements --- */
+    /* TRIPS PAGE COMPONENTS */
     .table-section {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 2rem auto;
     }
 
-    /* Multi-column Flex Layout for Trip Listings */
+    .trips-table th,
+    .trips-table td {
+        padding: 1rem;
+    }
+
     .trips-showcase {
         max-width: 1100px;
         margin: 0 auto;
@@ -180,34 +261,22 @@
         flex: 1;
     }
 
-    /* Alternating Design Pattern */
     .trip-entry.reverse {
         flex-direction: row-reverse;
-    }
-
-    .table-section {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .trips-table th,
-    .trips-table td {
-        padding: 1rem;
     }
 
     .trips-cta {
         padding: 4rem 2rem;
     }
 
-    /* ==========================================
-       CONTACT PAGE
-    ========================================== */
-
+    /* CONTACT PAGE COMPONENTS */
     .contact-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
         align-items: start;
+        max-width: 1100px;
+        margin: 20px auto;
     }
 
     .map-placeholder {
@@ -221,9 +290,7 @@
     .team-section {
         max-width: 1100px;
         margin: 40px auto;
-        padding: 30px;
-        background: var(--secondary-color);
-        text-align: center;
+        padding: 3rem;
     }
 
     .profile-container {
@@ -238,78 +305,17 @@
         height: 240px;
     }
 
-    .team-section {
-        padding: 3rem;
-    }
-
-    /* ---------- Footer ---------- */
-
+    /* FOOTER COMPONENTS */
     footer {
-        padding: 25px 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 30px;
     }
 
     .socialmedia img {
         width: 45px;
         height: 45px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-
-    .hero {
-        display: block;
-    }
-
-    .hero h1 {
-        top: 20px;
-        padding: 16px;
-        font-size: 2rem;
-        opacity: 0.7;
-    }
-
-    .hero article {
-        position: absolute;
-        top: 90px;
-        left: 40px;
-        right: 40px;
-        padding: 30px;
-        background-color: rgba(34, 33, 33, 0.75);
-    }
-
-    .hero article img {
-        width: 120px;
-        margin-left: 15px;
-    }
-
-    .history-section {
-        margin: 30px auto;
-        padding: 30px;
-    }
-
-    .history-grid {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        gap: 30px;
-    }
-
-    .history-grid img {
-        width: 250px;
-        height: 160px;
-    }
-
-    .adventure-section {
-        margin: 30px auto;
-        padding: 30px;
-    }
-
-    .adventure-container {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 15px;
-    }
-
-    .adventure-card {
-        flex: 1;
-        max-width: none;
     }
 }
